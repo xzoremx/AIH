@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Subir archivos</title>
+  <link rel="stylesheet" href="selector.css">
+</head>
+<body>
+  <div class="modal">
+    <div class="logo-container">
+      <img src="cerper_logo.png" alt="Logo" class="logo">
+    </div>
+    <h3>Subir archivos</h3>
+
+    <!-- Dropzone para Word -->
+    <div id="dropWord" class="dropzone" onclick="seleccionarWord()">
+      Seleccionar archivo Word
+      <div id="wordInfo" class="files">Word: (no seleccionado)</div>
+    </div>
+
+    <!-- Dropzone para Excel -->
+    <div id="dropExcel" class="dropzone" onclick="seleccionarExcel()">
+      Seleccionar archivo Excel
+      <div id="excelInfo" class="files">Excel: (no seleccionado)</div>
+    </div>
+
+    <div class="actions">
+      <button class="cancel" onclick="cancelar()">Cancelar</button>
+      <button id="attachBtn" class="attach" onclick="continuar()" disabled>Continuar</button>
+    </div>
+  </div>
+
+  <script>
+    let wordLoaded = false;
+    let excelLoaded = false;
+
+    const attachBtn = document.getElementById("attachBtn");
+    const wordInfo = document.getElementById("wordInfo");
+    const excelInfo = document.getElementById("excelInfo");
+
+    function checkReady() {
+      attachBtn.disabled = !(wordLoaded && excelLoaded);
+    }
+
+    async function seleccionarWord() {
+      const result = await pywebview.api.elegirWord();
+      if (result.status === "ok") {
+        wordInfo.innerText = "Word: " + result.path;
+        wordLoaded = true;
+        checkReady();
+      }
+    }
+
+    async function seleccionarExcel() {
+      const result = await pywebview.api.elegirExcel();
+      if (result.status === "ok") {
+        excelInfo.innerText = "Excel: " + result.path;
+        excelLoaded = true;
+        checkReady();
+      }
+    }
+
+    function cancelar() {
+      wordLoaded = false;
+      excelLoaded = false;
+      wordInfo.innerText = "Word: (no seleccionado)";
+      excelInfo.innerText = "Excel: (no seleccionado)";
+      checkReady();
+    }
+
+    async function continuar() {
+      if (wordLoaded && excelLoaded) {
+        const result = await pywebview.api.continuar();
+        console.log(result);
+      } else {
+        alert("Debe seleccionar Word y Excel antes de continuar.");
+      }
+    }
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,13 @@
+PyMuPDF
+python-docx
+comtypes
+Flask
+pandas
+pywin32
+pywebview
+Pillow
+playwright
+
+
+pip install -r requirements.txt
+py -m pip install --user -r requirements.txt
