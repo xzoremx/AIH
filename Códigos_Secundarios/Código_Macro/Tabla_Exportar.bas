@@ -476,7 +476,7 @@ ContarPorValor:
 Fin:
     CalcularDecimales = 0
 End Function
- 
+
 
 Sub ForzarFormatoNumerico(rng As Range)
     Dim c As Range
