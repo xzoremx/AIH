@@ -91,7 +91,6 @@ def vaciar_carpetas():
             return False
     return True
 
-
 def ejecutar_script(nombre_script, wait=True, args=None):
     ruta_script = Path(CODIGOS_DIR) / SCRIPTS[nombre_script]
     if not ruta_script.exists():
