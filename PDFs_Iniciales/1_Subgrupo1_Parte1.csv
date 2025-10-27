@@ -1,0 +1,23 @@
+DETERMINACIÓN DE ZOOPLANCTON ,,,,,,,
+TAXA,,,,,ESTADIO,IDENTIFICACION DE MUESTRAS,
+,,,,,,Ps-31,Ps-32
+,,,,,,RESULTADOS,
+Filo,Clase,Orden,Familia,Género y/o Especie,,Organismos / m³,Organismos / m³
+,,,,,,,
+Arthropoda,Copepoda,Calanoida,Acartiidae,Acartia tonsa,adulto,1264.66,103.03
+Arthropoda,Copepoda,Calanoida,Centropagidae ,Centropages brachiatus,adulto,1.89,1.54
+Arthropoda,Copepoda,Calanoida,Paracalanidae ,Paracalanus parvus,adulto,1249.90,0.15
+Arthropoda,Copepoda,Cyclopoida,Oithonidae,Oithona sp.,adulto,63.64,0.44
+Arthropoda,Copepoda,Cyclopoida,Clausidiidae,Hemicyclops sp.,adulto,1.56,0.15
+Arthropoda,Malacostraca ,Decapoda ,Hippidae,Nd,zoea,8.53,8.71
+Arthropoda,Malacostraca ,Decapoda ,Porcellanidae,Nd,zoea,0.25,---
+Arthropoda,Malacostraca ,Decapoda ,Pinnotheridae,Nd,zoea,3.94,0.37
+Arthropoda,Malacostraca ,Decapoda ,Xanthidae,Nd,zoea,---,0.07
+Chordata,Nd,Nd,Nd,Nd,huevo,0.25,0.22
+Chordata,Actinopterygii ,Clupeiformes,Engraulidae,Nd,huevo,240.79,155.13
+Chordata,Appendicularia,Copelata ,Oikopleuridae,Oikopleura sp.,adulto,171.90,0.22
+Total de organismos,,,,,,3007.31,270.03
+Volumen filtrado: ,,,,,,"12,193 m³","13,666 m³"
+OBSERVACIONES:,,,,,,,
+Nd: No determinado,,,,,,,
+"[---]: No se encontraron organismos, no aplica incertidumbre.",,,,,,,

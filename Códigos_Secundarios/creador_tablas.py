@@ -109,7 +109,7 @@ def formatea_valor(valor, formato):
         # Excepciones globales: remover cursiva si el valor contiene estas palabras
         excepciones_no_cursiva = {"Nd", "Genero", "Género"}
         for exc in excepciones_no_cursiva:
-            if exc.lower() in str(valor).lower():
+            if exc in str(valor):
                 # Remover todas las etiquetas <i>…</i> si contiene la excepción
                 valor = valor.replace("<i>", "").replace("</i>", "")
                 break
