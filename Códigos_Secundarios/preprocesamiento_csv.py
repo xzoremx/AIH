@@ -165,7 +165,7 @@ def insertar_observaciones(csv_path: str, mapa_path: str,
 
 
 # ------------------- Lógica Macrozoobentos -------------------------------
-TITLE_NEEDLE = "determinacion de macrozoobentos"
+TITLE_NEEDLE = "determinacion de "
 HEADER_TOKENS = {"clase", "orden", "familia", "genero", "especie"}
 
 CATEG_MAP = {
